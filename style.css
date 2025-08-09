@@ -1,0 +1,284 @@
+/*
+  Main stylesheet for Beyond Rehab Performance
+  Defines a clean, modern aesthetic with a flexible layout.
+*/
+
+/* Colour palette variables for easy theming */
+:root {
+  --primary-color: #0c4a6e; /* deep blue for headings and calls to action */
+  --secondary-color: #f97316; /* warm orange accent for buttons and highlights */
+  --light-color: #f8fafc; /* soft off‑white for backgrounds */
+  --dark-color: #0f172a; /* dark navy for header backgrounds (unused here) */
+  --text-color: #334155; /* subtle dark grey for body text */
+}
+
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+/* Header and navigation */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  background-image: url('images/abstract-bg.png');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Why section */
+.why .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.feature {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex: 1 1 280px;
+  padding: 1.5rem;
+}
+
+.feature h3 {
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Services preview */
+.services-preview .service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  flex: 1 1 350px;
+  max-width: 400px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 1rem;
+  color: var(--primary-color);
+}
+
+.service-card p {
+  margin: 0 1rem 1.5rem 1rem;
+  min-height: 80px;
+}
+
+.service-card .btn {
+  margin: 0 1rem 1.5rem 1rem;
+}
+
+/* Call to action */
+.cta {
+  background: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta h2 {
+  color: #ffffff;
+}
+
+.cta p {
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  background: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer p {
+  color: var(--text-color);
+}
+
+/* Contact form styling */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+  .features,
+  .service-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero {
+    height: 60vh;
+  }
+}
