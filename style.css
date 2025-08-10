@@ -300,3 +300,59 @@ a:hover {
     flex: 1 1 100%;
   }
 }
+
+/* === New two-column hero === */
+.hero-2col {
+  background: #f8fafb;
+  padding: 4rem 0 3rem;
+}
+
+.hero-2col-container {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-2col-left img.hero-logo,
+.hero-2col-left .hero-logo {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.hero-2col-left h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  line-height: 1.2;
+  color: #174a5d;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-2col-left p {
+  max-width: 640px;
+  font-size: 1rem;
+  color: #314a57;
+  margin-bottom: 1.5rem;
+}
+
+.hero-2col-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+/* Responsive for hero 2-col */
+@media (max-width: 900px) {
+  .hero-2col-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-2col-right {
+    order: -1;
+  }
+}
